@@ -1,12 +1,12 @@
 ---
-description: This is my previous works.
+description: Project on trivago tech camp 2019
 ---
 
-# triversity @trivago
+# Triversity
 
 ![](../.gitbook/assets/logo.png)
 
-\*\*\*\*[**triversity**](https://github.com/trivago/triversity) is a university collaboration management tool.
+\*\*\*\*[**triversity**](https://github.com/trivago/triversity) is a project management tool for university collaborations.
 
 ![](../.gitbook/assets/screenshot.jpeg)
 

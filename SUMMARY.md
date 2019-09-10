@@ -4,7 +4,7 @@
 
 ## Project
 
-* [triversity @trivago](project/project.md)
+* [Triversity](project/project.md)
 
 ## Today I Learned <a id="til"></a>
 
