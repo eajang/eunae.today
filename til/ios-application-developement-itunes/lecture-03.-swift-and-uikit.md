@@ -100,7 +100,9 @@ stepCounter.totalSteps = 360
 #### 1. Array
 
 ```swift
-var names: [String] = ["Eunae", "Gyumin"]
+var names: [String] = []
+var names: Array[String] = []
+var names: [String]()
 ```
 
 #### 2. Dictionary
