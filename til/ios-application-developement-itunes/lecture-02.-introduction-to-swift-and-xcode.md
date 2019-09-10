@@ -35,6 +35,18 @@
 ### Xcode \(Environment\)
 
 * Playground --- demo video
+* Xcode Debugging
+
+{% tabs %}
+{% tab title="Commands usage in Terminal" %}
+`po sender`: show information about the current sender \(e.g. the button I pressed\)  
+`po (sender as UIButton).titleLable.text`: inspect more detail
+{% endtab %}
+
+{% tab title="Edit breakpoint" %}
+We can make a condition, ignoring-counts or actions with po in terminal.
+{% endtab %}
+{% endtabs %}
 
 
 

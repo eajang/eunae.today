@@ -4,19 +4,6 @@
 
 ## Lecture 03. Swift & UIKit
 
-### Xcode Debugging
-
-{% tabs %}
-{% tab title="Command usage in terminal" %}
-`po sender`: show information about the current sender \(e.g. the button I pressed\)  
-`po (sender as UIButton).titleLable.text`: inspect more detail
-{% endtab %}
-
-{% tab title="Edit breakpoints" %}
-We can make a condition, ignoring-counts or actions with po in terminal.
-{% endtab %}
-{% endtabs %}
-
 ### Strings
 
 * Single characters are also of type String `let a = "a"               // 'a' is a String let b: Character = "b"    // 'b' is a Character`
@@ -73,20 +60,35 @@ sayHello("Eunae", "Gyumin")            // function call
 * String, Int, Double, Bool
 * Value types \(not reference types such as **classes**\)
 * It is possible to **define functions and initializers**\(e.g. `String.init() or String()`\) in struct
-* Property observers
+* Property observers \([more details](https://docs.swift.org/swift-book/LanguageGuide/Properties.html#ID262)\)
 
 ```swift
 struct StepCounter {
     var totalSteps: Int = 0 {
         willSet {
+            // willSet is called when the new value of totalSteps is passed.
             print("About to set totalSteps to \(newValue)")
         }
         didSet {
+            // didSet is called after the value of totalSteps is updated.
             if totalSteps > oldValue {
                 print("Added \(totalSteps - oldValue) steps")
             }
         }
     }
 }
+let stepCounter = StepCounter()
+stepCounter.totalSteps = 200
+// call 'willSet' - output: About to set totalSteps to 200
+// call 'didSet'  - output: Added 200 steps
+stepCounter.totalSteps = 360
+// call 'willSet' - output: About to set totalSteps to 360
+// call 'didSet'  - outputAdded 160 steps
 ```
+
+### Classes
+
+* Reference types
+* Subclass and overriding functions are possible.
+  * ⚠ Do everything first in your class and then call initializer of super class.
 
