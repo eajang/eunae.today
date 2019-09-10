@@ -13,3 +13,7 @@
   * [Lecture 02. Introduction to Swift & Xcode](til/ios-application-developement-itunes/lecture-02.-introduction-to-swift-and-xcode.md)
   * [Lecture 03. Swift & UIKit](til/ios-application-developement-itunes/lecture-03.-swift-and-uikit.md)
 
+## References
+
+* [Swift](references/swift.md)
+
