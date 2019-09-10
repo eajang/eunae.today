@@ -25,6 +25,8 @@
    * Explicit specifying is also possible.
 2. Optionals
    * Can be `nil`
+   * `?`  
+   * `!` : implicitly unwrapped optionals
 3. Tuples
    * Set of variables
    * Multiple types also possible
