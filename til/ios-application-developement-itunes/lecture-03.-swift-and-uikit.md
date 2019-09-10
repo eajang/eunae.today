@@ -92,3 +92,20 @@ stepCounter.totalSteps = 360
 * Subclass and overriding functions are possible.
   * ⚠ Do everything first in your class and then call initializer of super class.
 
+### Collections
+
+* Groups of objects
+* ⚠Value types ⚠
+
+#### 1. Array
+
+```swift
+var names: [String] = ["Eunae", "Gyumin"]
+```
+
+#### 2. Dictionary
+
+```swift
+var scores: ["Eunae": 100, "Gyumin": 200]
+```
+
