@@ -1,8 +1,8 @@
 ---
-description: Project on trivago tech camp 2019
+description: Project at trivago tech camp 2019
 ---
 
-# Triversity
+# triversity
 
 ![](../.gitbook/assets/logo.png)
 
