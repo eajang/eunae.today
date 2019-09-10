@@ -97,17 +97,26 @@ stepCounter.totalSteps = 360
 * Groups of objects
 * ⚠Value types ⚠
 
-#### 1. Array
+#### 1. Arrays
 
 ```swift
 var names: [String] = []
 var names: Array[String] = []
-var names: [String]()
+var names = [String]()
 ```
 
-#### 2. Dictionary
+#### 2. Dictionaries
 
 ```swift
-var scores: ["Eunae": 100, "Gyumin": 200]
+var myDictionary = [String: Int]()            // type of key : type of value
+var myDictionary = Dictionary<String, Int>()
+var myDictionary: [String: Int] = [:]
+
+Array(myDictionary.keys)      // get an array of all keys in a dictionary
+Array(myDictionary.values)    // get an array of all values in a dictionary
+
+if let myValue = myDictionary["myKey"] {
+    // do something if "myKey" exists in myDictionary. -> checking optionals
+}
 ```
 
