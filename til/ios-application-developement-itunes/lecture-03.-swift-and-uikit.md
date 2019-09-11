@@ -146,5 +146,15 @@ if let myValue = myDictionary["myKey"] {
 
 * Reference : [Gan Chau](https://medium.com/@GanChau?source=post_page-----b5331fb233a1----------------------).\(2015\). Medium, _Outlet vs Action Connections in Xcode_. Retrieved from [https://medium.com/@GanChau/outlet-vs-action-connections-in-xcode-b5331fb233a1](https://medium.com/@GanChau/outlet-vs-action-connections-in-xcode-b5331fb233a1)
 
+### Gesture Recognizers
 
+* touch gestures
+* can be included using the interface builder and code
+* custom touch input by basic three events; touch began/touch moved/touch ended
+
+```swift
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { }
+override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) { }
+override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) { }
+```
 
