@@ -1,6 +1,6 @@
 # Lecture 03. Swift & UIKit
 
-[iOS Application Development WS17/18 by RWTH Aachen University](https://itunes.apple.com/jm/course/ios-application-development-ws17-18/id1288558355)
+ [iOS Application Development WS17/18 by RWTH Aachen University](https://itunes.apple.com/jm/course/ios-application-development-ws17-18/id1288558355)
 
 ## Lecture 3-1. Swift
 
@@ -120,7 +120,31 @@ if let myValue = myDictionary["myKey"] {
 }
 ```
 
-
-
 ## Lecture 3-2. Introduction to UIKit
+
+### Overview of UIView
+
+* foundation class for all visual elements
+* Subclasses
+  * UILabel
+  * UIButton
+  * UIImageView
+  * UIScrollView 
+  * ...
+
+### Connection code to ui
+
+{% tabs %}
+{% tab title="Outlet" %}
+> An **outlet connection** is created when you need to send a message from **your code to a user interface** object in Xcode’s storyboard.
+{% endtab %}
+
+{% tab title="Action" %}
+> An **action connection** is created when you need to send a message from **a control in the storyboard to your code**.
+{% endtab %}
+{% endtabs %}
+
+* Reference : [Gan Chau](https://medium.com/@GanChau?source=post_page-----b5331fb233a1----------------------).\(2015\). Medium, _Outlet vs Action Connections in Xcode_. Retrieved from [https://medium.com/@GanChau/outlet-vs-action-connections-in-xcode-b5331fb233a1](https://medium.com/@GanChau/outlet-vs-action-connections-in-xcode-b5331fb233a1)
+
+
 

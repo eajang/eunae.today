@@ -1,7 +1,6 @@
 # Table of contents
 
 * [me](README.md)
-* [Apple Special Event.](apple-special-event..md)
 
 ## Project
 

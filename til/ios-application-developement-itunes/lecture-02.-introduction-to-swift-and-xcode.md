@@ -35,6 +35,7 @@
 ### Xcode \(Environment\)
 
 * Playground --- demo video
+  * xcodepoj : all setting for the project
 * Xcode Debugging
 
 {% tabs %}
