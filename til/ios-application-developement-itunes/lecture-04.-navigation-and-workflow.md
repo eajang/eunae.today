@@ -13,5 +13,15 @@
 
 ### [Safe Area](https://developer.apple.com/documentation/uikit/uiview/positioning_content_relative_to_the_safe_area)
 
-### 
+* demo in the course
+
+### [Seques](https://developer.apple.com/library/archive/featuredarticles/ViewControllerPGforiPhoneOS/UsingSegues.html)
+
+* demo in the course
+
+### Navigation Controllers
+
+* demo in the course
+
+![Navigation demo](../../.gitbook/assets/demo.gif)
 
