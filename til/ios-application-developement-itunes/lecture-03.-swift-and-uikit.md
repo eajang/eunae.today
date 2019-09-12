@@ -55,6 +55,22 @@ guard condition else {
 // true: execute some code
 ```
 
+### Enumerations
+
+```swift
+enum CompassPoint {
+    case north, east, south, west
+}
+// usage
+var compassHeading: CompassPoint = .west
+var compassHeading = CompassPoint.west
+// The compiler assigns `compassHeading` as a `CompassPoint`
+compassHeading = .north
+```
+
+* type safety
+* easy to read code
+
 ### Strings
 
 * Single characters are also of type String `let a = "a"               // 'a' is a String let b: Character = "b"    // 'b' is a Character`
