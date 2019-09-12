@@ -25,6 +25,36 @@ if let unwrappedVariable = optionalVariable {
 }
 ```
 
+* Unwrapping multiple optionals by `nested if` or concatenation by `,`
+* [Unwrapping nested optionals](https://docs.swift.org/swift-book/LanguageGuide/OptionalChaining.html#ID247)
+* possible to use in functions as parameters or return type
+* Failable initializers \(e.g. file-loading\)
+
+```swift
+init?() {
+    return nil
+}
+```
+
+### Type Casting
+
+* `as?` :boolean statements
+* `as!`: force cast. Use only when you are certain that the specific type is correct.
+
+### The Any Type
+
+* represent an instance of **any** type - usually used for array of different types of elements
+* **AnyObject**: represent **any** **class** within Swift \(not structure\)
+
+### The Guard Command
+
+```swift
+guard condition else {
+    // false: execute some code
+}
+// true: execute some code
+```
+
 ### Strings
 
 * Single characters are also of type String `let a = "a"               // 'a' is a String let b: Character = "b"    // 'b' is a Character`
