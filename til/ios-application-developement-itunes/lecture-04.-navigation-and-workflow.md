@@ -23,5 +23,5 @@
 
 * demo in the course
 
-![Navigation demo](../../.gitbook/assets/demo.gif)
+![Navigation controllers demo](../../.gitbook/assets/demo.gif)
 
