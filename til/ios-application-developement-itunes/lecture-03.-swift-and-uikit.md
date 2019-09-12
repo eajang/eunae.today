@@ -4,6 +4,27 @@
 
 ## Lecture 3-1. Swift
 
+### Variables with nil
+
+Use `nil` when the value is undefined or there is no information about the variable yet.
+
+### Optionals
+
+* Optionals contains two sets; nil or value of other types\(including custom-type\).
+* force-upwrap operator **`!`**
+  * ⚠ Before unwrapping an optional we need to check if the value is not nil⚠
+
+```swift
+if optionalVariable != nil { 
+   let unwrappedVariable = optionalVariable!
+   // do something
+} 
+// shorter version
+if let unwrappedVariable = optionalVariable {
+   // do something
+}
+```
+
 ### Strings
 
 * Single characters are also of type String `let a = "a"               // 'a' is a String let b: Character = "b"    // 'b' is a Character`

@@ -24,9 +24,13 @@
    * Automatic type-casting
    * Explicit specifying is also possible.
 2. Optionals
+
    * Can be `nil`
    * `?`  
    * `!` : implicitly unwrapped optionals
+
+   [&gt;&gt; more about **Optionals**](https://app.gitbook.com/@eajang/s/blog/~/edit/drafts/-Lo_rO5xw1RUvwHTnK3V/til/ios-application-developement-itunes/lecture-03.-swift-and-uikit#optionals)\*\*\*\*
+
 3. Tuples
    * Set of variables
    * Multiple types also possible
