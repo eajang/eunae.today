@@ -86,5 +86,23 @@ struct Emoji {
 
 ![Main.storyboard](../../.gitbook/assets/grafik%20%283%29.png)
 
+### Step 2. Add function for tap event.
+
+#### Implementation method from the delegate-protocol
+
+{% code-tabs %}
+{% code-tabs-item title="EmojiTableViewController.swift" %}
+```swift
+...
+// tap-event
+override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let emoji = emojis[indexPath.row]
+        print("\(emoji.symbol) \(indexPath)")        // example output: 😀 [0, 0]
+}
+...
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
 
 
