@@ -86,23 +86,61 @@ struct Emoji {
 
 ![Main.storyboard](../../.gitbook/assets/grafik%20%283%29.png)
 
-### Step 2. Add function for tap event.
+### Step 2. Add Reaction
 
-#### Implementation method from the delegate-protocol
+#### Tap-Event: Implementation method from the delegate-protocol
 
 {% code-tabs %}
 {% code-tabs-item title="EmojiTableViewController.swift" %}
 ```swift
 ...
-// tap-event
-override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    // tap-event
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let emoji = emojis[indexPath.row]
         print("\(emoji.symbol) \(indexPath)")        // example output: 😀 [0, 0]
-}
+    }
 ...
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### Rearrange the cells
 
+![Demo for rearranging](../../.gitbook/assets/screencast-2019-09-16-18-41-06.gif)
+
+```swift
+...
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+    }
+
+...
+    // indexPath: description of the cell that you want to display in each row
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        ...
+        // enable to reorder the cells
+        cell.showsReorderControl = true
+        
+        return cell
+    }
+...
+    // Override to support rearranging the table view.
+    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let movedEmoji = emojis.remove(at: fromIndexPath.row)
+        emojis.insert(movedEmoji, at: to.row)
+        tableView.reloadData()
+    }
+    
+    // Remove the minus button on the leftside in editing mode
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+...
+```
 
