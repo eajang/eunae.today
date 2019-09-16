@@ -40,7 +40,8 @@
       <td style="text-align:center">Open GL ES</td>
       <td style="text-align:center">Metal</td>
       <td style="text-align:center">
-        <p>SpriteKit</p>
+        <p><b>SpriteKit</b>
+        </p>
         <p>SceneKit</p>
       </td>
     </tr>
