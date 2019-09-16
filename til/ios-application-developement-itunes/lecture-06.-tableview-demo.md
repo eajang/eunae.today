@@ -108,6 +108,8 @@ struct Emoji {
 
 ![Demo for rearranging](../../.gitbook/assets/screencast-2019-09-16-18-41-06.gif)
 
+{% code-tabs %}
+{% code-tabs-item title="EmojiTableViewController.swift" %}
 ```swift
 ...
     override func viewDidLoad() {
@@ -143,4 +145,32 @@ struct Emoji {
     }
 ...
 ```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### Step 3. Add remove function in editing mode
+
+![Demo for removing](../../.gitbook/assets/screencast-2019-09-16-20-28-51.gif)
+
+{% code-tabs %}
+{% code-tabs-item title="EmojiTableViewController.swift" %}
+```swift
+...
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // Delete the row from the data source
+            emojis.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+...
+    // Remove the minus symbol on the leftside in editing mode
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+...
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
