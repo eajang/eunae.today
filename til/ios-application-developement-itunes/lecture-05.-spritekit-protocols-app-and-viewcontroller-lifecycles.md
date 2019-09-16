@@ -105,8 +105,135 @@ func createSomething() {
 }
 ```
 
-### Lecture 05. SpriteKit, Protocols, App and ViewController LifeCycles
+## Lecture 5-2. Swift Protocols and Extensions
 
-###  <a id="strings"></a>
+### Protocols
 
-* 
+* a blueprint of functionality \(similar to Interface in Java\) e.g. `CustomStringConvertible`, `Equatable`, `Comparable`, ...         \(can define my own print command using protocol\)
+* Example of `Equatable`
+
+```swift
+struct Employee: Equatable {
+    var firstName: String
+    var lastName: String
+    var jobTitle: String
+    // Implement my own equals-function
+    static func == (lhs: Employee, rhs: Employee) -> Bool {
+        return lhs.firstName == rhs.firstName &&
+                lhs.lastName == rhs.lastName &&
+                lhs.jobTitle == rhs.jobTitle
+    }
+}
+```
+
+* creating Protocol
+
+```swift
+protocol FullyNamed {
+    var fullName: String { get } // get is property: readable-value
+    func sayFullName()
+}
+// usage
+struct Person: FullyNamed {
+    var firstName: String
+    var lastName: String
+    
+    var fullName: String {
+        return "\(firstName) \(lastName)"
+    }
+    func sayFullName() {
+        print(fullName)
+    }
+}
+```
+
+### Delegation
+
+* Design pattern that delegates functionality an instance of a class or structure
+* Implemented using Protocols
+* Commonly used in UIKit
+  * UITableViewDelegate, UIPickerViewDelegate
+* Often provide optional protocol requirements \( != normal protocol\)
+
+### Extensions
+
+* Add **functionality** to types that are already defined as follows:
+
+```swift
+// UIColor: basic class which represents color for ios 
+extension UIColor {
+    static var favoriteColor: UIColor {
+        return UIColor(red: 0.5, green: 0.1, blue: 0.5, alpha: 1.0)
+    }
+}
+```
+
+* Affects to the entire project overall
+* Cannot add properties. It means that it cannot increase the size of the object \(memory\)
+
+## Lecture 5-3. App and ViewController LifeCycles
+
+### UIView Controllers
+
+* Tab Bar Controller
+  * Each tab is completely independent \(not connected to each other\)
+
+### ScrollView
+
+* UIScrollView
+  * Parent of UITableView
+* `.frames` property
+  * Where is the ScrollView on the screen?
+* `.contentSize` property
+  * How large is the scrollable area?
+  * Setting the contenSize: the size of SubView.frame
+* ScrollView with StackView
+* Content Insets
+  * define the padding of scroll view `let contentInsets = UIEdgeInsetsMake(0.0, 0.0, 300, 0.0) self.theScrollView.contentInset = contentInsets self.theScrollView.scrollIndicatorInsets = contentInsets` 
+* UIScrollViewDelegate
+
+### View Controller Life Cycle
+
+![Life Cycle of View Controller](../../.gitbook/assets/grafik.png)
+
+> [https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html)
+
+### App Life Cycle
+
+```text
+
+```
+
+![Life Cycle of Application](../../.gitbook/assets/grafik%20%281%29.png)
+
+> [https://developer.apple.com/documentation/uikit/app\_and\_environment/managing\_your\_app\_s\_life\_cycle](https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle)
+
+* Foreground
+  * Launch Screen UI\(Inactive\) and App UI\(Active\)
+* Background
+  * storing, managing network connection ... 
+* Application delegate
+  * You can acess or get notification of different states in Application delegate
+
+![AppDelegate.swift](../../.gitbook/assets/grafik%20%282%29.png)
+
+### MVC in iOS
+
+#### View
+
+* Storyboard
+* updated by controller
+* delivers 'User action' to controller
+
+#### Model
+
+* Model Classes
+* Persistent Storage
+* updated by controller
+* notify to controller
+
+#### Controller
+
+* ViewController
+* ModelController
+
