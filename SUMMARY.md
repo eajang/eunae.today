@@ -14,6 +14,7 @@
   * [Lecture 03. Swift & UIKit](til/ios-application-developement-itunes/lecture-03.-swift-and-uikit.md)
   * [Lecture 04. Navigation and Workflow](til/ios-application-developement-itunes/lecture-04.-navigation-and-workflow.md)
   * [Lecture 05. SpriteKit, Protocols, App and ViewController LifeCycles](til/ios-application-developement-itunes/lecture-05.-spritekit-protocols-app-and-viewcontroller-lifecycles.md)
+  * [Lecture 06. TableView Demo](til/ios-application-developement-itunes/lecture-06.-tableview-demo.md)
 
 ## References
 
