@@ -1,3 +1,9 @@
+---
+description: >-
+  These are my notes of keywords that I have learned from the course iOS
+  Application Development '17 by RWTH Aachen University in iTunes.
+---
+
 # Lecture 04. Navigation and Workflow
 
  [iOS Application Development WS17/18 by RWTH Aachen University](https://itunes.apple.com/jm/course/ios-application-development-ws17-18/id1288558355)​
