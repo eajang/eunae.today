@@ -200,7 +200,7 @@ extension UIColor {
 
 ### View Controller Life Cycle
 
-![Life Cycle of View Controller](../../.gitbook/assets/grafik%20%282%29.png)
+![Life Cycle of View Controller](../../.gitbook/assets/grafik%20%283%29.png)
 
 > [https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html)
 
@@ -221,7 +221,7 @@ extension UIColor {
 * Application delegate
   * You can acess or get notification of different states in Application delegate
 
-![AppDelegate.swift](../../.gitbook/assets/grafik%20%281%29.png)
+![AppDelegate.swift](../../.gitbook/assets/grafik%20%282%29.png)
 
 ### MVC in iOS
 

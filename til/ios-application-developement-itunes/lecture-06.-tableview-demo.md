@@ -84,7 +84,7 @@ struct Emoji {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Main.storyboard](../../.gitbook/assets/grafik%20%283%29.png)
+![Main.storyboard](../../.gitbook/assets/grafik%20%284%29.png)
 
 ### Step 2. Add Reaction
 
@@ -170,6 +170,129 @@ struct Emoji {
         return .delete
     }
 ...
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+### Step 4. Edit and Add an Emoji
+
+![Demo for editing and adding](../../.gitbook/assets/screencast-2019-09-16-21-25-41.gif)
+
+![Main.storyboard \(making sagues with static table view\)](../../.gitbook/assets/grafik%20%281%29.png)
+
+{% code-tabs %}
+{% code-tabs-item title="EmojiTableViewController.swift" %}
+```swift
+...
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "EditEmoji" {
+            let indexPath = tableView.indexPathForSelectedRow!
+            let emoji = emojis[indexPath.row]
+            
+            let navigationController = segue.destination as! UINavigationController
+            let addEditEmojiTableViewController = navigationController.viewControllers.first as! AddEditEmojiTableViewController
+            
+            addEditEmojiTableViewController.emoji = emoji
+        }
+    }
+ 
+    @IBAction func unwindToEmojiTableViewController(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveUnwind" else {
+            return
+        }
+        
+        // Where the segue started
+        let sourceViewController = segue.source as! AddEditEmojiTableViewController
+        
+        if let emoji = sourceViewController.emoji {
+            // Check whether the emoji edited or created
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+                // Edited emoji
+                emojis[selectedIndexPath.row] = emoji
+                tableView.reloadRows(at: [selectedIndexPath], with: .none)
+            } else {
+                // Created emoji
+                let newIndexPath = IndexPath(row: emojis.count, section: 0)
+                emojis.append(emoji)
+                tableView.insertRows(at: [newIndexPath], with: .automatic)
+            }
+        }
+    }
+
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+{% code-tabs %}
+{% code-tabs-item title="AddEditEmojiTableViewController.swift" %}
+```swift
+...
+    @IBOutlet weak var symbolTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var usageTextField: UITextField!
+    
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var emoji: Emoji?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        if let emoji = emoji {          // unwrapping optionals
+            symbolTextField.text = emoji.symbol
+            nameTextField.text = emoji.name
+            descriptionTextField.text = emoji.description
+            usageTextField.text = emoji.usage
+        }
+        
+        updateSaveButtonState()
+        
+        ...
+    }
+    
+    // Enable save button if all of the textfield is not empty
+    func updateSaveButtonState() {
+        let symbolText = symbolTextField.text ?? ""
+        let nameText = nameTextField.text ?? ""
+        let descriptionText = descriptionTextField.text ?? ""
+        let usageText = usageTextField.text ?? ""
+        
+        saveButton.isEnabled = !symbolText.isEmpty &&
+            !nameText.isEmpty &&
+            !descriptionText.isEmpty &&
+            !usageText.isEmpty
+    }
+    
+    // When the text field in state editing changed
+    @IBAction func textEditingChanged(_ sender: UITextField) {
+        updateSaveButtonState()
+    }
+...
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        
+        guard segue.identifier == "saveUnwind" else {
+            return
+        }
+        
+        let symbol = symbolTextField.text!
+        let name = nameTextField.text!
+        let description = descriptionTextField.text!
+        let usage = usageTextField.text!
+        
+        emoji = Emoji(symbol: symbol, name: name, description: description, usage: usage)
+    }
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
