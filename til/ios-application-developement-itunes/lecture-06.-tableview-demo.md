@@ -297,6 +297,6 @@ struct Emoji {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-> Full source[  
+> Full sources[  
 > https://github.com/eajang/iOS-Example-EmojiDictionary](https://github.com/eajang/iOS-Example-EmojiDictionary)
 
