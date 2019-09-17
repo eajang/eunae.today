@@ -1,0 +1,6 @@
+[submodule "til/ios-application-developement-itunes/demo/iOS-Example-EmojiDictionary"]
+	path = til/ios-application-developement-itunes/demo/iOS-Example-EmojiDictionary
+	url = https://github.com/eajang/iOS-Example-EmojiDictionary.git
+[submodule "til/ios-application-developement-itunes/demo/iOS-Example-ComplexInputScreens"]
+	path = til/ios-application-developement-itunes/demo/iOS-Example-ComplexInputScreens
+	url = https://github.com/eajang/iOS-Example-ComplexInputScreens.git
