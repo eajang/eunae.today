@@ -146,3 +146,28 @@ UIView.animate(withDuration: 2.0) {    // seconds
 }
 ```
 
+* Example of simple animation
+
+![Simple animation](../../.gitbook/assets/simpleanimationdemo.gif)
+
+```swift
+import UIKit
+import PlaygroundSupport
+
+let liveViewFrame = CGRect(x: 0, y: 0, width: 300, height: 300)
+let liveView = UIView(frame: liveViewFrame)
+liveView.backgroundColor = .black
+PlaygroundPage.current.liveView = liveView
+
+let smallFrame = CGRect(x: 0, y: 0, width: 100, height: 100)
+let square = UIView(frame: smallFrame)
+square.backgroundColor = .green
+liveView.addSubview(square)
+
+// Animation
+UIView.animate(withDuration: 3, animations: {
+    square.backgroundColor = .orange
+    square.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
+})
+```
+
