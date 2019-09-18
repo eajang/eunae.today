@@ -20,5 +20,71 @@ description: >-
 
 * self-contained blocks of functionality
 * "Anonymous functions"
-* basic structure `{ (parameters) -> return-type in     statements }`
+* make code shorter and more readable
+* basic structure `{ (parameters) -> return type in     statements }`
+* no return value: use `Void`
+* Example
+
+```swift
+// Function
+func sumFunction(numbers: [Int]) {
+    var total = 0
+    // Code
+    return total
+}
+// Function usage
+let sum = sumFunction(numbers: [4, 24, 45, 12])
+
+// Closure
+let sumClosure = { (numbers: [Int]) -> Int in
+    var total = 0
+    // Code
+    return total
+}
+// Closure usage
+let sum = sumClosure([4, 24, 45, 12])
+```
+
+### Trailing Closure
+
+* Closure as the only argument:
+
+```swift
+let sortedTracks = tracks.sorted { (firstTrack, secondTrack) -> Bool in
+    return firstTrack.starRating < secondTrack.starRating
+}
+```
+
+* Closure as the last argument:
+
+```swift
+func performRequest(url: String, response: (Int) -> Void) { }
+// Usage
+performRequest(url: "https://www.apple.com") { (data) in
+    print(data)
+}
+```
+
+### Simplifying Closures
+
+```swift
+let sortedTracks = tracks.sorted { (firstTrack, secondTrack) -> Bool in
+    return firstTrack.starRating < secondTrack.starRating
+}
+// Simplifying - Infer the return type
+let sortedTracks = tracks.sorted { (firstTrack, secondTrack) in
+    return firstTrack.starRating < secondTrack.starRating
+}
+// Simplifying - Use placeholder arguments
+let sortedTracks = tracks.sorted {
+    return $0.starRating < $1.starRating
+}
+// Simplifying - If the closure has just one statement:
+let sortedTracks = tracks.sorted {$0.starRating < $1.starRating}
+// Operator Methods
+// Two parameters of String, return a value of type Bool
+let sortedNames = names.sorted (by: >)
+```
+
+
 
