@@ -86,5 +86,51 @@ let sortedTracks = tracks.sorted {$0.starRating < $1.starRating}
 let sortedNames = names.sorted (by: >)
 ```
 
+### Map
+
+* `map(_:)`  : call the closure expression once for each item in the array.
+* Example
+
+```swift
+// names is an array of first names
+let fullNames = names.map { (name) -> String in
+    return name + " Smith"
+}
+```
+
+### Filter
+
+* `filter(_:)` : call the closure expression once for each item in the array.
+* Example
+
+```swift
+let numbersLessThan20 = numbers.filter { (number) -> Bool in
+    return number < 20
+}
+```
+
+### Reduce
+
+* `reduce(_:_:)` : returns the result of combining the elements of the sequence
+
+  `reduce(_ initialResult: Result, _ nextPartialResult:(Result, Element) throws  
+  -> Result) rethrows -> Result)`
+
+* Example
+
+```swift
+let total = numbers.reduce(0) { (currentTotal, newValue) -> Int in
+    return currentTotal + newValue
+}
+// Short version
+let total = numbers.reduce(0, {$0 + $1})
+```
+
+###  Capturing Values
+
+* A nested function can capture any of its outer function's arguments, constants and variables.
+
+## Lecture 8-3. Practical Animation
+
 
 
