@@ -132,5 +132,17 @@ let total = numbers.reduce(0, {$0 + $1})
 
 ## Lecture 8-3. Practical Animation
 
+### UIView Animations 
 
+```swift
+// Animation Closures:
+animate(withDuration:animations:)
+animate(withDuration:animations:completion:)
+animate(withDuration:delay:options:animations:completion:)
+
+// Example 
+UIView.animate(withDuration: 2.0) {    // seconds
+    aView.alpha = 0.3
+}
+```
 
