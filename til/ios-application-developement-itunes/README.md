@@ -20,3 +20,7 @@ These are my notes of keywords that I have learned from the course [**iOS Applic
 
 {% page-ref page="lecture-06.-tableview-demo.md" %}
 
+{% page-ref page="lecture-08.building-complex-input-screens-closures-and-animations.md" %}
+
+{% page-ref page="lecture-09.-working-with-the-web.md" %}
+
