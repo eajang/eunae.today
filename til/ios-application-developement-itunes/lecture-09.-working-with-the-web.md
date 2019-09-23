@@ -40,6 +40,8 @@ task.resume()
 
 ### Working with an API
 
+![Demo](../../.gitbook/assets/iphone-8-13.0-2019-09-23-20-04-49.png)
+
 {% code-tabs %}
 {% code-tabs-item title="URL" %}
 ```swift
