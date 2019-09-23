@@ -4,3 +4,6 @@
 [submodule "til/ios-application-developement-itunes/demo/iOS-Example-ComplexInputScreens"]
 	path = til/ios-application-developement-itunes/demo/iOS-Example-ComplexInputScreens
 	url = https://github.com/eajang/iOS-Example-ComplexInputScreens.git
+[submodule "til/ios-application-developement-itunes/demo/iOS-Example-APITest"]
+	path = til/ios-application-developement-itunes/demo/iOS-Example-APITest
+	url = https://github.com/eajang/iOS-Example-APITest.git
