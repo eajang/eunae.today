@@ -90,6 +90,13 @@ task.resume()
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+### Network Activity Indicator
+
+```swift
+UIApplication.shared.isNetworkActivityIndicatorVisible = true
+UIApplication.shared.isNetworkActivityIndicatorVisible = false
+```
+
 ### Multi Threading in iOS
 
 * Slow or expensive -&gt; background
