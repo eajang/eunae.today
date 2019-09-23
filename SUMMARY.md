@@ -17,6 +17,7 @@
   * [Lecture 05. SpriteKit, Protocols, App and ViewController LifeCycles](til/ios-application-developement-itunes/lecture-05.-spritekit-protocols-app-and-viewcontroller-lifecycles.md)
   * [Lecture 06. TableView Demo](til/ios-application-developement-itunes/lecture-06.-tableview-demo.md)
   * [Lecture 08.Building Complex Input Screens, Closures, and Animations](til/ios-application-developement-itunes/lecture-08.building-complex-input-screens-closures-and-animations.md)
+  * [Lecture 09. Working with the web](til/ios-application-developement-itunes/lecture-09.-working-with-the-web.md)
 * [Android Weekends](til/android-weekends.md)
 
 ## References
