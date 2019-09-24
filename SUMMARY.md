@@ -9,6 +9,9 @@
 ## Today I Learned <a id="til"></a>
 
 * [Git / Github](til/git-github.md)
+* [SwiftUI Tutorials](til/swiftui-tutorials/README.md)
+  * [SwiftUI Essentials](til/swiftui-tutorials/swiftui-essentials/README.md)
+    * [Creating and Combining Views](til/swiftui-tutorials/swiftui-essentials/creating-and-combining-views.md)
 * [iOS Application Developement \(iTunes\)](til/ios-application-developement-itunes/README.md)
   * [Lecture 01. Introduction to Mobile Development](til/ios-application-developement-itunes/lecture-01.-introduction-to-mobile-development.md)
   * [Lecture 02. Introduction to Swift & Xcode](til/ios-application-developement-itunes/lecture-02.-introduction-to-swift-and-xcode.md)
@@ -18,7 +21,7 @@
   * [Lecture 06. TableView Demo](til/ios-application-developement-itunes/lecture-06.-tableview-demo.md)
   * [Lecture 08.Building Complex Input Screens, Closures, and Animations](til/ios-application-developement-itunes/lecture-08.building-complex-input-screens-closures-and-animations.md)
   * [Lecture 09. Working with the web](til/ios-application-developement-itunes/lecture-09.-working-with-the-web.md)
-* [Android Weekends](til/android-weekends.md)
+* [Dependency Injection\(DI\) and Dagger 2](til/android-weekends.md)
 
 ## References
 

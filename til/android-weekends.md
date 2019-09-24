@@ -1,8 +1,8 @@
 ---
-description: Study briefly about some unfamiliar concepts in Android
+description: Study briefly about DI and Dagger 2 in Android
 ---
 
-# Android Weekends
+# Dependency Injection\(DI\) and Dagger 2
 
 > **Reference**  
 > : Hari Vignesh Jayapalan.\(2017\). 'Dependency Injection Technique', Medium, _Dagger 2 for Android Beginners — DI part I_. Retrieved from [https://medium.com/@harivigneshjayapalan/dagger-2-for-android-beginners-di-part-i-f5cc4e5ad878](https://medium.com/@harivigneshjayapalan/dagger-2-for-android-beginners-di-part-i-f5cc4e5ad878)
