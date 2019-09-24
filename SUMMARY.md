@@ -12,6 +12,7 @@
 * [SwiftUI Tutorials](til/swiftui-tutorials/README.md)
   * [SwiftUI Essentials](til/swiftui-tutorials/swiftui-essentials/README.md)
     * [Creating and Combining Views](til/swiftui-tutorials/swiftui-essentials/creating-and-combining-views.md)
+    * [Building Lists and Navigation](til/swiftui-tutorials/swiftui-essentials/building-lists-and-navigation.md)
 * [iOS Application Developement \(iTunes\)](til/ios-application-developement-itunes/README.md)
   * [Lecture 01. Introduction to Mobile Development](til/ios-application-developement-itunes/lecture-01.-introduction-to-mobile-development.md)
   * [Lecture 02. Introduction to Swift & Xcode](til/ios-application-developement-itunes/lecture-02.-introduction-to-swift-and-xcode.md)
