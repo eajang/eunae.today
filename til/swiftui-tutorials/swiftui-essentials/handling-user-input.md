@@ -6,6 +6,8 @@ description: 25. Sep. 2019
 
 {% embed url="https://developer.apple.com/tutorials/swiftui/handling-user-input" %}
 
+![Demo](../../../.gitbook/assets/screenshot-favoritebutton.gif)
+
 ## Filter the List View - Approach 1. by @State property
 
 {% code-tabs %}
@@ -172,6 +174,4 @@ HStack {
 ```
 {% endcode-tabs-item %}
 {% endcode-tabs %}
-
-![Demo for the works](../../../.gitbook/assets/screenshot-favoritebutton.gif)
 
