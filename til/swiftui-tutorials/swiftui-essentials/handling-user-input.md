@@ -146,3 +146,32 @@ struct LandmarkDetail: View {
 * It should be supplied by the ancester view
 * Simple to use with `ObservableObject`
 
+## Create a Favorite Button and make it works!
+
+{% code-tabs %}
+{% code-tabs-item title="LandmarkDetail.swift" %}
+```swift
+...
+HStack {
+    Text(landmark.name)
+        .font(.title)
+            
+    Button(action: {
+        self.userData.landmarks[self.landmarkIndex].isFavorite.toggle()
+    }) {
+            if self.userData.landmarks[self.landmarkIndex].isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            } else {
+                Image(systemName: "star")
+                    .foregroundColor(.gray)
+            }
+        }
+    }
+...        
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+![Demo for the works](../../../.gitbook/assets/screenshot-favoritebutton.gif)
+
