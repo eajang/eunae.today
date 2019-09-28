@@ -6,6 +6,8 @@ description: 25. Sep. 2019
 
 {% embed url="https://developer.apple.com/tutorials/swiftui/drawing-paths-and-shapes" %}
 
+![](../../../.gitbook/assets/screenshot.jpg)
+
 {% code-tabs %}
 {% code-tabs-item title="BadgeBackground.swift" %}
 ```swift
@@ -53,6 +55,39 @@ description: 25. Sep. 2019
 ...
 ```
 {% endcode-tabs-item %}
+
+{% code-tabs-item title="Badge.swift" %}
+```swift
+...
+struct Badge: View {
+    static let rotationCount = 8
+    
+    var badgeSymbols: some View {
+        
+        ForEach(0..<Badge.rotationCount) { i in
+            RotatedBadgeSymbol(
+                angle: .degrees(Double(i) / Double(Badge.rotationCount) * 360.0)
+            )
+        }
+        .opacity(0.5)
+    }
+    
+    var body: some View {
+        ZStack {
+            BadgeBackground()
+            
+            GeometryReader { geometry in
+                self.badgeSymbols
+                    .scaleEffect(1.0 / 4.0, anchor: .top)
+                    .position(x: geometry.size.width / 2.0, y: (3.0 / 4.0) * geometry.size.height)
+            }
+        }
+        .scaledToFit()
+    }
+}
+...
+```
+{% endcode-tabs-item %}
 {% endcode-tabs %}
 
 ### CGPoint
@@ -75,6 +110,8 @@ A container view that defines its content as **a function of its own size and co
 
 * Wrap the path in a GeometryReader ➡ Use the size of its container.
 * `xOffset` is calculated for the left and right empty spaces.
+* `func padding(_ length: CGFloat) -> some View` : gives a padding along all edge insets by the amount\(length\)
+* `func rotationEffect(_ angle: Angle, anchor: UnitPoint = .center) -> some View` : rotates a view by the given angle and anchor point of rotation is center as default.
 
 ### LinearGradient
 
