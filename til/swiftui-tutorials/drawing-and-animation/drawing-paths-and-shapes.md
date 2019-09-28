@@ -121,3 +121,6 @@ Applies the color function along an axis, as defined by its start and end points
   * `gradient: .init(colors:)`: create a gradient from an array of colors.
 * `aspectRatio(_:contentMode:)` : the gradient fill by a given ratio
 
+> Full Source Codes  
+> [https://github.com/eajang/SwiftUI-Example-Landmark/tree/master/Landmarks/Supporting%20Views/Badge](https://github.com/eajang/SwiftUI-Example-Landmark/tree/master/Landmarks/Supporting%20Views/Badge)
+
