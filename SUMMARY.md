@@ -16,6 +16,7 @@
     * [Handling User Input](til/swiftui-tutorials/swiftui-essentials/handling-user-input.md)
   * [Drawing and Animation](til/swiftui-tutorials/drawing-and-animation/README.md)
     * [Drawing Paths and Shapes](til/swiftui-tutorials/drawing-and-animation/drawing-paths-and-shapes.md)
+    * [Animating Views and Transitions](til/swiftui-tutorials/drawing-and-animation/animating-views-and-transitions.md)
 * [iOS Application Developement \(iTunes\)](til/ios-application-developement-itunes/README.md)
   * [Lecture 01. Introduction to Mobile Development](til/ios-application-developement-itunes/lecture-01.-introduction-to-mobile-development.md)
   * [Lecture 02. Introduction to Swift & Xcode](til/ios-application-developement-itunes/lecture-02.-introduction-to-swift-and-xcode.md)
