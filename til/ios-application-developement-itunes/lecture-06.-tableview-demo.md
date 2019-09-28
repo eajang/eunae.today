@@ -84,7 +84,7 @@ struct Emoji {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Main.storyboard](../../.gitbook/assets/grafik%20%284%29.png)
+![Main.storyboard](../../.gitbook/assets/grafik%20%285%29.png)
 
 ### Step 2. Add Reaction
 
@@ -178,7 +178,7 @@ struct Emoji {
 
 ![Demo for editing and adding](../../.gitbook/assets/screencast-2019-09-16-21-25-41.gif)
 
-![Main.storyboard \(making sagues with static table view\)](../../.gitbook/assets/grafik%20%281%29.png)
+![Main.storyboard \(making sagues with static table view\)](../../.gitbook/assets/grafik%20%282%29.png)
 
 {% code-tabs %}
 {% code-tabs-item title="EmojiTableViewController.swift" %}
