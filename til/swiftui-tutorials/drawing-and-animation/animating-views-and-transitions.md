@@ -1,5 +1,5 @@
 ---
-description: 28. Sep. 2019
+description: '28. Sep. 2019, 05. Oct. 2019'
 ---
 
 # Animating Views and Transitions
