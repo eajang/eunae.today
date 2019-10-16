@@ -9,7 +9,7 @@
 ## Today I Learned <a id="til"></a>
 
 * [Git / Github](til/git-github.md)
-* [Bootstrap grid system](til/bootstrap-grid-system.md)
+* [Bootstrap Layout](til/bootstrap-grid-system.md)
 * [SwiftUI Tutorials](til/swiftui-tutorials/README.md)
   * [SwiftUI Essentials](til/swiftui-tutorials/swiftui-essentials/README.md)
     * [Creating and Combining Views](til/swiftui-tutorials/swiftui-essentials/creating-and-combining-views.md)

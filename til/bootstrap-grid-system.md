@@ -2,7 +2,7 @@
 description: 'https://getbootstrap.com/docs/4.3/layout/grid/'
 ---
 
-# Bootstrap grid system
+# Bootstrap Layout
 
 ## The Flexible Box Model \(as flexbox\)
 
