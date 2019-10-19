@@ -67,7 +67,7 @@ $$
 
        $$p(x_n|\theta)=\frac {1}{\sqrt{2\pi}\sigma}\exp\{-\frac{(x-\mu)^2}{2\sigma^2}\}$$
 
-   2. Likelihood of **all** data points: $$L(\theta) = p(X|\theta) = \prod_{n=1}^{N}p(x_n|\theta)$$  + taking log \(to simplify\) $$E(\theta) = - \ln L(\theta) = -\Sigma_{n=1}^{N}\ln p(x_n|\theta)$$ 
+   2. Likelihood of **all** data points: $$L(\theta) = p(X|\theta) = \prod_{n=1}^{N}p(x_n|\theta)$$  + taking log \(to simplify\) $$E(\theta) = - \ln L(\theta) = -\sum_{n=1}^{N}\ln p(x_n|\theta)$$ 
 
    ➡ Maximize the likelihood ~ Minimize the negative log-likelihood
 
@@ -78,13 +78,13 @@ $$
 
      we can obtain
 
-     *  $$\hat \mu = \frac{1}{N}\Sigma_{n=1}^{N}x_n \quad \quad\quad \quad \cdots \quad \text{sample mean}$$ 
-     * $$\hat \sigma^2 = \frac{1}{N}\Sigma_{n=1}^{N}(x_n-\hat\mu)^2 \quad \cdots \quad \text{sample variance}$$
+     *  $$\hat \mu = \frac{1}{N}\sum_{n=1}^{N}x_n \quad \quad\quad \quad \cdots \quad \text{sample mean}$$ 
+     * $$\hat \sigma^2 = \frac{1}{N}\sum_{n=1}^{N}(x_n-\hat\mu)^2 \quad \cdots \quad \text{sample variance}$$
 
    * **Maximum Likelihood estimate for the parameters** of a  Gaussian distribution: $$\hat\theta = (\hat \mu, \hat \sigma)$$ 
    * Limitation
      * **Underestimates** the variance of the distribution
-       * Correction: $$\tilde \sigma^2 = \frac{1}{N}\Sigma_{n=1}^{N}(x_n-\hat\mu)^2 $$
+       * Correction: $$\tilde \sigma^2 = \frac{1}{N}\sum_{n=1}^{N}(x_n-\hat\mu)^2 $$
      * Maximum likelihood overfits to the observed data.
    * Maximum Likelihood - Fequentist concept
 
@@ -97,6 +97,118 @@ $$
  
 
 ## Method \#2 - Non-parametric representations
+
+The functional form of the distribution is **unknown**.  
+➡Estimate probability density from **data** 
+
+#### 1.Histograms
+
+* Partition the data space into distinct **bins**
+* $$\Delta_i$$ ****: widths - a smoothing factor
+* $$n_i$$ : number of observations in each bin
+
+$$
+p_i = \frac{n_i}{N\Delta_i}
+$$
+
+* use for any dimensionality
+* no need to store data points
+* **Problem**
+  * consideration about size of **bin**
+  * the **required number of bins** grows **exponentially** with dimension --&gt; large number - large number of data points  ➡ good for **low** dimensional data
+
+#### 
+
+#### ✔ Statistically Better-Founded Approach
+
+* Data point $$\mathrm{x}$$ from $$p(\mathrm{x})$$
+* Region $$\mathcal{R}$$ 
+* Probability that x falls into small region$$\mathcal{R}$$:
+
+$$
+P = \int_{\mathcal{R}}p(y)dy
+$$
+
+* $$\mathcal{R}$$ sufiiciently small ➡$$p(\mathrm{x})$$ is rouphly constant
+  * $$V$$: the volume of $$\mathcal{R}$$
+
+$$
+P = \int_{\mathcal{R}}p(y)dy \approx p(\mathrm{x})V
+$$
+
+* $$N$$\(the number of samples\) sufficiently large:
+  * K: the number of counted samples
+
+$$
+P = \frac{K}{N} \Rightarrow p(\mathrm{x}) \approx \frac{K}{NV}
+$$
+
+* $$V$$fixed + $$K$$determine\(count\) ➡ **Kernel Methods**
+* $$V$$determine + $$K$$fixed ➡**K-Nearest Neibor** 
+
+#### 2. Kernel density estimation
+
+Any kernel with $$k(\mathbf{u}) \geqslant 0$$ and the volumn $$\int k(\mathbf{u})d\mathbf{u} = 1$$ can be used. 
+
+* $$a = b$$: center
+* $$\mathrm{x}_n$$: location of each data points
+
+$$
+K = \sum_{n=1}^{N}k(\mathrm{x}-\mathrm{x}_n)
+$$
+
+$$
+p(\mathrm{x}) \approx \frac {K}{NV} = \frac{1}{N}\sum_{n=1}^{N}k(\mathrm{x}-\mathrm{x}_n)
+$$
+
+   ****1. **Parzen Window**; a simple kernel function
+
+* Hypercube
+  * dimension $$D$$ 
+  * edge length $$h$$
+* Kernel function 
+
+$$
+k(\mathbf{u}) = \begin{cases}
+  1,  &|u_i| \le \frac{1}{2}h, \quad i = 1,\dots,D\\
+  0, & \text{else}
+\end{cases}
+$$
+
+$$
+V = \int k(\mathbf{u})d\mathbf{u} = h^D
+$$
+
+$$
+p(\mathrm{x}) \approx \frac {K}{NV} = \frac{1}{Nh^D}\sum_{n=1}^{N}k(\mathrm{x}-\mathrm{x}_n)
+$$
+
+* Interpretations of parzen window
+  1. Kernel window $$k$$ at location $$\mathrm{x}$$ + count data points which fall inside of kernel window
+  2. Kernel window $$k$$ around each data point $$\mathrm{x}_n$$ + sum up their influences\(**overlapped** area\) at location $$\mathrm{x}$$. ➡ visualization of density
+* Problem: artificial **discontinuities** at the cube boundaries  ➡ choose a **smoother** kernel profile function \(e.g. Gaussian\)
+
+   2. **Gaussian Kernel**
+
+* Kernel function
+
+$$
+k(\mathbf{u}) = \frac {1}{(2\pi h^2)^{1/2}}\exp\biggl\{-\frac {\mathbf{u}^2}{2h^2}\biggr\}
+$$
+
+* Volumn is 1 because of the Normalization of Gaussian.
+
+$$
+V = \int k(\mathbf{u})d\mathbf{u} =1
+$$
+
+$$
+p(\mathrm{x}) \approx \frac {K}{NV} = \frac{1}{N}\sum_{n=1}^{N}\frac {1}{(2\pi)^{D/2}h}\exp\biggl\{-\frac {||\mathrm{x} - \mathrm{x}||^2}{2h^2}\biggr\}
+$$
+
+* $$h$$: acts as a smoother
+
+#### 3. k-Nearest-Neighbor
 
 ## Mixture models
 
