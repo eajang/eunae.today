@@ -30,6 +30,8 @@
   * [Lecture 08.Building Complex Input Screens, Closures, and Animations](til/ios-application-developement-itunes/lecture-08.building-complex-input-screens-closures-and-animations.md)
   * [Lecture 09. Working with the web](til/ios-application-developement-itunes/lecture-09.-working-with-the-web.md)
 * [Dependency Injection\(DI\) and Dagger 2](til/android-weekends.md)
+* [Machine Learning](til/machine-learning/README.md)
+  * [Bayes Decision Theory](til/machine-learning/bayes-decision-theory.md)
 
 ## References
 

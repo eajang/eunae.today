@@ -84,7 +84,7 @@ struct Emoji {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
-![Main.storyboard](../../.gitbook/assets/grafik%20%285%29.png)
+![Main.storyboard](../../.gitbook/assets/grafik%20%286%29.png)
 
 ### Step 2. Add Reaction
 

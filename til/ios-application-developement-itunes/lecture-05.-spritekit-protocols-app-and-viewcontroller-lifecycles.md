@@ -200,7 +200,7 @@ extension UIColor {
 
 ### View Controller Life Cycle
 
-![Life Cycle of View Controller](../../.gitbook/assets/grafik%20%284%29.png)
+![Life Cycle of View Controller](../../.gitbook/assets/grafik%20%285%29.png)
 
 > [https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/WorkWithViewControllers.html)
 
