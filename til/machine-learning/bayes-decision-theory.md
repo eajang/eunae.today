@@ -5,7 +5,9 @@
 ## Frequentism vs Bayesianism
 
 * Frequentism: probabilities are related to frequency of the events.
+  * Criticism: if the prior is wrong, the result will be worse.
 * Bayesianism: probabilities are related to our knowledge about the events.
+  * generally to get better uncertainty estimates for many situations.
 
 ## Basic concepts of bayes decision theory
 
@@ -79,5 +81,51 @@ $$
 * Same effect with $$p(C_1|x) > p(C_2|x)$$ 
 * Ratio of priors: decision threshold $$\theta$$ 
 
+### Classifying with Loss Functions
 
+Generalization to decisions with a **loss function**.
+
+* Differentiate btw. the **possible decisions** and the **possible true** classes
+* The cost of loss may be asymmetric
+* Formulizing: loss matrix $$L_{kj}$$ 
+
+$$
+L_{kj} = \text{loss for decision } C_j \text{ if truth is }C_k
+$$
+
+* Different loss functions may lead to different Bayes optimal strategies\(behaviours\) \(e.g. from different actors\).
+
+Optimal solution ➡ one that minimizes the \(the expected\) loss.
+
+* why "the expected loss"?
+  * loss function depends on the **true** class, which is **unknown**.
+
+⭐**Solution**⭐   
+: The class that higher posterior probability + The decision with minimized expected loss.
+
+### The Reject Option
+
+Classification errors - from the \(reject\) regions where the largest posterior probability btw. two classes is significanly less than 1.
+
+* Relatively uncertain about the class membership.
+* e.g. look for another test to show evidence.
+
+### Discriminant Functions
+
+Formulate classification in terms of **comparisons**
+
+$$
+y_1(x), ... , y_k(x)\\
+y_k(x) = p(C_k|x)
+$$
+
+* Generative methods: $$y_k(x) \propto p(x|C_k)p(C_k)$$ 
+  * modelling each distribution \(shape\)
+  * determin calss membership.
+* Discriminative methods: $$y_k(x) = p(C_k|x)$$ 
+  * solve th inference problem of determining the posterior class probabilities
+  * assign each new $$x$$ to its class.
+* Alternative
+  * directly find a suitable $$y_k(x)$$ 
+  * maps each input $$x$$ directly into a class label 
 

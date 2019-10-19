@@ -32,6 +32,7 @@
 * [Dependency Injection\(DI\) and Dagger 2](til/android-weekends.md)
 * [Machine Learning](til/machine-learning/README.md)
   * [Bayes Decision Theory](til/machine-learning/bayes-decision-theory.md)
+  * [Probability Density Estimation](til/machine-learning/probability-density-estimation.md)
 
 ## References
 
