@@ -12,8 +12,8 @@ description: 24. Sep. 2019
 
 ### View Protocol
 
-{% code-tabs %}
-{% code-tabs-item title="ContentView.swift" %}
+{% tabs %}
+{% tab title="ContentView.swift" %}
 ```swift
 import SwiftUI
 
@@ -26,16 +26,16 @@ struct ContentView: View {
 }
 ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * Describes the view's content and layout
 * body propertiy only returns a single view. ➡ [need to combine and embeded multiple views](creating-and-combining-views.md#combining-views-using-stacks).
 
 ### Preview
 
-{% code-tabs %}
-{% code-tabs-item title="ContentView.swift" %}
+{% tabs %}
+{% tab title="ContentView.swift" %}
 ```swift
 ...
 struct ContentView_Preview: PreviewProvider {
@@ -45,8 +45,8 @@ struct ContentView_Preview: PreviewProvider {
 }
 ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * Updates to reflect the change what you did in a view's body property.
 
@@ -58,8 +58,8 @@ struct ContentView_Preview: PreviewProvider {
 
 ## Combining Views using Stacks
 
-{% code-tabs %}
-{% code-tabs-item title="ContentView.swift" %}
+{% tabs %}
+{% tab title="ContentView.swift" %}
 ```swift
 import SwiftUI
 
@@ -81,8 +81,8 @@ struct ContentView: View {
 }
 ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### VStack / HStack / ZStack
 
@@ -100,8 +100,8 @@ struct ContentView: View {
 
 ## Create a Custom Image View
 
-{% code-tabs %}
-{% code-tabs-item title="CircleImage.swift" %}
+{% tabs %}
+{% tab title="CircleImage.swift" %}
 ```swift
 import SwiftUI
 
@@ -121,16 +121,16 @@ struct CircleImage_Previews: PreviewProvider {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * `Image(_:)`: Initializer
 * `clipShape(Circle())`: the circular clipping shpate to the image
 
 ### Use UIKit and SwiftUI Views Together + MapKit
 
-{% code-tabs %}
-{% code-tabs-item title="MapView.swift" %}
+{% tabs %}
+{% tab title="MapView.swift" %}
 ```swift
 import SwiftUI
 import MapKit
@@ -155,8 +155,8 @@ struct MapView_Previews: PreviewProvider {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * `protocol UIViewRepresentable` : A view that represents a UIKit view.
   * **Two requirements** need to add
@@ -165,8 +165,8 @@ struct MapView_Previews: PreviewProvider {
 
 ## Compose the Detail View
 
-{% code-tabs %}
-{% code-tabs-item title="ContentView.swift" %}
+{% tabs %}
+{% tab title="ContentView.swift" %}
 ```swift
 ...
 struct ContentView: View {
@@ -199,8 +199,8 @@ struct ContentView: View {
 }
 ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * `frame(width:height:)` set the size of the view
   * Specify only the `height` parameter ➡ automatically sized to the width of its content.

@@ -10,8 +10,8 @@ description: 24. Sep. 2019
 
 ## Sample Data
 
-{% code-tabs %}
-{% code-tabs-item title="Landmark.swift" %}
+{% tabs %}
+{% tab title="Landmark.swift" %}
 ```swift
 import SwiftUI
 import CoreLocation
@@ -50,9 +50,9 @@ struct Coordinates: Hashable, Codable {
 }
 
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="landmarkData.json" %}
+{% tab title="landmarkData.json" %}
 ```swift
 [
     {
@@ -214,16 +214,16 @@ struct Coordinates: Hashable, Codable {
 ]
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * `fileprivate`
   * When you want to access your code within the same file from different classes or structs.
 
 ## Create the Row View and Customize the Row Preview
 
-{% code-tabs %}
-{% code-tabs-item title="LandmarkRow.swift" %}
+{% tabs %}
+{% tab title="LandmarkRow.swift" %}
 ```swift
 import SwiftUI
 
@@ -251,16 +251,16 @@ struct LandmarkRow_Previews: PreviewProvider {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * `Group` :a container for grouping view content.
   * XCode renders the group's child views as separate previews in the canvas.
 
 ## Create the dynamically-generated List of Landmarks and Set Up Navigation Between List and Detail
 
-{% code-tabs %}
-{% code-tabs-item title="LandmarkList.swift" %}
+{% tabs %}
+{% tab title="LandmarkList.swift" %}
 ```swift
 import SwiftUI
 
@@ -285,8 +285,8 @@ struct LandmarkList_Previews: PreviewProvider {
 }
 
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Identifiable protocol
 

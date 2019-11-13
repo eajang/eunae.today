@@ -8,8 +8,8 @@ description: 25. Sep. 2019 / 28. Sep. 2019
 
 ![](../../../.gitbook/assets/screenshot.jpg)
 
-{% code-tabs %}
-{% code-tabs-item title="BadgeBackground.swift" %}
+{% tabs %}
+{% tab title="BadgeBackground.swift" %}
 ```swift
 ...
     GeometryReader { geometry in
@@ -54,9 +54,9 @@ description: 25. Sep. 2019 / 28. Sep. 2019
         }
 ...
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="Badge.swift" %}
+{% tab title="Badge.swift" %}
 ```swift
 ...
 struct Badge: View {
@@ -87,8 +87,8 @@ struct Badge: View {
 }
 ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ### CGPoint
 

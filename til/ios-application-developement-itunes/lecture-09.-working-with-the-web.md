@@ -42,8 +42,8 @@ task.resume()
 
 ![Demo](../../.gitbook/assets/iphone-8-13.0-2019-09-23-20-04-49.png)
 
-{% code-tabs %}
-{% code-tabs-item title="URL" %}
+{% tabs %}
+{% tab title="URL" %}
 ```swift
 extension URL {
     func withQueries(_ queries: [String: String]) -> URL? {
@@ -55,8 +55,8 @@ extension URL {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 ```swift
 let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
@@ -75,8 +75,8 @@ let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
 task.resume()
 ```
 
-{% code-tabs %}
-{% code-tabs-item title="response" %}
+{% tabs %}
+{% tab title="response" %}
 ```bash
 {
  "copyright":"Tun\u00e7 TezelTWAN",
@@ -89,8 +89,8 @@ task.resume()
  "url":"https://apod.nasa.gov/apod/image/1909/seasons_tezel_1080.jpg"
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 > Full Sources  
 > [https://github.com/eajang/iOS-Example-APITest/](https://github.com/eajang/iOS-Example-APITest/)

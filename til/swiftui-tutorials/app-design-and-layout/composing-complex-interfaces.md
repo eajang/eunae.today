@@ -8,8 +8,8 @@ description: 05. Oct. 2019
 
 ![](../../../.gitbook/assets/screenshot01.gif)
 
-{% code-tabs %}
-{% code-tabs-item title="Home.swift" %}
+{% tabs %}
+{% tab title="Home.swift" %}
 ```swift
 ...
 struct CategoryHome: View {
@@ -69,9 +69,9 @@ struct FeaturedLandmarks: View {
 }
 ...
 ```
-{% endcode-tabs-item %}
+{% endtab %}
 
-{% code-tabs-item title="CategoryRow.swift" %}
+{% tab title="CategoryRow.swift" %}
 ```swift
 ...
 struct CategoryRow: View {
@@ -130,8 +130,8 @@ struct CategoryRow_Previews: PreviewProvider {
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 > In Xcode 11 beta 6, if you nest a `ScrollView` inside a `List` and that `ScrollView` contains a `NavigationLink`, the links won’t navigate to the destination when tapped by the user.
 

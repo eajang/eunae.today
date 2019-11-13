@@ -6,8 +6,8 @@ description: '28. Sep. 2019, 05. Oct. 2019'
 
 {% embed url="https://developer.apple.com/tutorials/swiftui/animating-views-and-transitions" %}
 
-{% code-tabs %}
-{% code-tabs-item title="HikeView.swift" %}
+{% tabs %}
+{% tab title="HikeView.swift" %}
 ```swift
 ...
 extension AnyTransition {
@@ -60,8 +60,8 @@ struct HikeView: View {
 }
 ...
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+{% endtab %}
+{% endtabs %}
 
 * `func animation(_ animation: Animation?) -> some View` : animates any changes to animatable properties\(color, opacity, rotation, size ... \) of the view.
 * basic animations
