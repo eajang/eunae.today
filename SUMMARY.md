@@ -6,6 +6,12 @@
 
 * [triversity](project/project.md)
 
+## Internship @ trivago
+
+* [Overview](internship-trivago/overview.md)
+* [Daily log](internship-trivago/daily-log/README.md)
+  * [Day 02. Set up and learn up](internship-trivago/daily-log/day-02.-set-up-and-learn-up.md)
+
 ## Today I Learned <a id="til"></a>
 
 * [Git / Github](til/git-github.md)
