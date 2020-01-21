@@ -4,6 +4,12 @@ description: 'Working time: 08:00 ~'
 
 # Day 02. Set up and learn up
 
+## More about the product
+
+* Getting familiar with the terminogies of the product
+* Repository and task board
+* Tech stacks
+
 ## About Melody - Introduction
 
 {% hint style="info" %}
@@ -22,7 +28,34 @@ description: 'Working time: 08:00 ~'
   * `ref` for an element Dom node
   * `bindEvents()`: bind event to element
 
+## About RxJS - Overview
 
+{% hint style="info" %}
+Learning RxJS with the [guide](https://rxjs-dev.firebaseapp.com/guide/overview)
+{% endhint %}
 
+### Purity
 
+* Function -&gt; as pure as possible
+
+### Flow
+
+* Operators for controlling the events flow through the observables
+
+### Values
+
+* Transforming the values passed through the observables
+
+```javascript
+import { fromEvent } from 'rxjs';
+import { throttleTime, map, scan } from 'rxjs/operators';
+
+fromEvent(document, 'click')
+.pipe(
+  throttleTime(1000),
+  map(event => event.clientX),                   // pass the value
+  scan((count, clientX) => count + clientX, 0)   // transform the value
+)
+.subscribe(count => console.log(count));
+```
 
