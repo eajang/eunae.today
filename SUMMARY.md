@@ -10,11 +10,15 @@
 
 * [Overview](internship-trivago/overview.md)
 * [Daily log](internship-trivago/daily-log/README.md)
+  * [Day 03. Set up and learn up 2](internship-trivago/daily-log/day-03.-set-up-and-learn-up-2.md)
   * [Day 02. Set up and learn up](internship-trivago/daily-log/day-02.-set-up-and-learn-up.md)
 
 ## Today I Learned <a id="til"></a>
 
 * [Git / Github](til/git-github.md)
+* [RxJS](til/rxjs/README.md)
+  * [Learn RxJS](til/rxjs/learn-rxjs/README.md)
+    * [Observable](til/rxjs/learn-rxjs/observable.md)
 * [Bootstrap Layout](til/bootstrap-grid-system.md)
 * [SwiftUI Tutorials](til/swiftui-tutorials/README.md)
   * [SwiftUI Essentials](til/swiftui-tutorials/swiftui-essentials/README.md)
