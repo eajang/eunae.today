@@ -9,5 +9,11 @@ description: 'Working time: 08:16 ~'
 * [x] Reading an article ➡️ [ICE\(Impact Confidence Ease\) model](https://medium.com/@nimay/inside-product-introduction-to-feature-priority-using-ice-impact-confidence-ease-and-gist-5180434e5b15)
 * [x] Check today's schedule/meeting
 
-## 
+## Learning about RxJS
+
+{% page-ref page="../../til/rxjs/learn-rxjs/observable.md" %}
+
+
+
+
 
