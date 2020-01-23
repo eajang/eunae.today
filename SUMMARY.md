@@ -10,6 +10,7 @@
 
 * [Overview](internship-trivago/overview.md)
 * [Daily log](internship-trivago/daily-log/README.md)
+  * [Day 04. Set up and learn up 3](internship-trivago/daily-log/day-04.-set-up-and-learn-up-3.md)
   * [Day 03. Set up and learn up 2](internship-trivago/daily-log/day-03.-set-up-and-learn-up-2.md)
   * [Day 02. Set up and learn up](internship-trivago/daily-log/day-02.-set-up-and-learn-up.md)
 
@@ -17,6 +18,7 @@
 
 * [Git / Github](til/git-github.md)
 * [RxJS](til/rxjs/README.md)
+  * [\[Frontend Master\] Asynchronous Programming in JavaScript \(with Rx.js Observables\)](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables.md)
   * [Learn RxJS](til/rxjs/learn-rxjs/README.md)
     * [Observable](til/rxjs/learn-rxjs/observable.md)
 * [Bootstrap Layout](til/bootstrap-grid-system.md)
