@@ -12,8 +12,7 @@ description: 24. Sep. 2019
 
 ### View Protocol
 
-{% tabs %}
-{% tab title="ContentView.swift" %}
+{% code title="ContentView.swift" %}
 ```swift
 import SwiftUI
 
@@ -26,16 +25,14 @@ struct ContentView: View {
 }
 ...
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 * Describes the view's content and layout
 * body propertiy only returns a single view. ➡ [need to combine and embeded multiple views](creating-and-combining-views.md#combining-views-using-stacks).
 
 ### Preview
 
-{% tabs %}
-{% tab title="ContentView.swift" %}
+{% code title="ContentView.swift" %}
 ```swift
 ...
 struct ContentView_Preview: PreviewProvider {
@@ -45,8 +42,7 @@ struct ContentView_Preview: PreviewProvider {
 }
 ...
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 * Updates to reflect the change what you did in a view's body property.
 
@@ -58,8 +54,7 @@ struct ContentView_Preview: PreviewProvider {
 
 ## Combining Views using Stacks
 
-{% tabs %}
-{% tab title="ContentView.swift" %}
+{% code title="ContentView.swift" %}
 ```swift
 import SwiftUI
 
@@ -81,8 +76,7 @@ struct ContentView: View {
 }
 ...
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 ### VStack / HStack / ZStack
 
@@ -100,8 +94,7 @@ struct ContentView: View {
 
 ## Create a Custom Image View
 
-{% tabs %}
-{% tab title="CircleImage.swift" %}
+{% code title="CircleImage.swift" %}
 ```swift
 import SwiftUI
 
@@ -121,16 +114,14 @@ struct CircleImage_Previews: PreviewProvider {
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 * `Image(_:)`: Initializer
 * `clipShape(Circle())`: the circular clipping shpate to the image
 
 ### Use UIKit and SwiftUI Views Together + MapKit
 
-{% tabs %}
-{% tab title="MapView.swift" %}
+{% code title="MapView.swift" %}
 ```swift
 import SwiftUI
 import MapKit
@@ -155,8 +146,7 @@ struct MapView_Previews: PreviewProvider {
     }
 }
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 * `protocol UIViewRepresentable` : A view that represents a UIKit view.
   * **Two requirements** need to add
@@ -165,8 +155,7 @@ struct MapView_Previews: PreviewProvider {
 
 ## Compose the Detail View
 
-{% tabs %}
-{% tab title="ContentView.swift" %}
+{% code title="ContentView.swift" %}
 ```swift
 ...
 struct ContentView: View {
@@ -199,8 +188,7 @@ struct ContentView: View {
 }
 ...
 ```
-{% endtab %}
-{% endtabs %}
+{% endcode %}
 
 * `frame(width:height:)` set the size of the view
   * Specify only the `height` parameter ➡ automatically sized to the width of its content.
