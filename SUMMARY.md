@@ -20,6 +20,7 @@
 * [Git / Github](til/git-github.md)
 * [RxJS](til/rxjs/README.md)
   * [\[Frontend Master\] Asynchronous Programming in JavaScript \(with Rx.js Observables\)](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/README.md)
+    * [Exercises](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/exercises.md)
     * [Observables](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/observables.md)
     * [Building Blocks](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/building-blocks.md)
   * [Learn RxJS](til/rxjs/learn-rxjs/README.md)
