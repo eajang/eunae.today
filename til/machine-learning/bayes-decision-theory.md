@@ -51,7 +51,7 @@ $$
 
 ## Goal of Bayesian Decision Theory
 
-\*\*\*\*⭐ **Minimize the probability of a misclassification**.
+⭐ **Minimize the probability of a misclassification**.
 
 ### Misclassification
 

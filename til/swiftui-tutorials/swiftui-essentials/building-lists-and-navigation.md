@@ -222,7 +222,8 @@ struct Coordinates: Hashable, Codable {
 
 ## Create the Row View and Customize the Row Preview
 
-{% code title="LandmarkRow.swift" %}
+{% tabs %}
+{% tab title="LandmarkRow.swift" %}
 ```swift
 import SwiftUI
 
@@ -250,14 +251,16 @@ struct LandmarkRow_Previews: PreviewProvider {
 }
 
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 * `Group` :a container for grouping view content.
   * XCode renders the group's child views as separate previews in the canvas.
 
 ## Create the dynamically-generated List of Landmarks and Set Up Navigation Between List and Detail
 
-{% code title="LandmarkList.swift" %}
+{% tabs %}
+{% tab title="LandmarkList.swift" %}
 ```swift
 import SwiftUI
 
@@ -282,7 +285,8 @@ struct LandmarkList_Previews: PreviewProvider {
 }
 
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Identifiable protocol
 

@@ -14,7 +14,8 @@ description: >-
 
 ![Demo for first step](../../.gitbook/assets/screencast-2019-09-16-17-14-16.gif)
 
-{% code title="Emoji.swift" %}
+{% tabs %}
+{% tab title="Emoji.swift" %}
 ```swift
 // Data Model of our app
 struct Emoji {
@@ -24,9 +25,11 @@ struct Emoji {
     var usage: String
 }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
-{% code title="EmojiTableViewController.swift" %}
+{% tabs %}
+{% tab title="EmojiTableViewController.swift" %}
 ```swift
 class EmojiTableViewController: UITableViewController {
     // Example data set
@@ -78,7 +81,8 @@ struct Emoji {
     
 }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ![Main.storyboard](../../.gitbook/assets/grafik%20%286%29.png)
 
@@ -86,7 +90,8 @@ struct Emoji {
 
 #### Tap-Event: Implementation method from the delegate-protocol
 
-{% code title="EmojiTableViewController.swift" %}
+{% tabs %}
+{% tab title="EmojiTableViewController.swift" %}
 ```swift
 ...
     // tap-event
@@ -96,13 +101,15 @@ struct Emoji {
     }
 ...
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 #### Rearrange the cells
 
 ![Demo for rearranging](../../.gitbook/assets/screencast-2019-09-16-18-41-06.gif)
 
-{% code title="EmojiTableViewController.swift" %}
+{% tabs %}
+{% tab title="EmojiTableViewController.swift" %}
 ```swift
 ...
     override func viewDidLoad() {
@@ -138,13 +145,15 @@ struct Emoji {
     }
 ...
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Step 3. Add remove function in editing mode
 
 ![Demo for removing](../../.gitbook/assets/screencast-2019-09-16-20-28-51.gif)
 
-{% code title="EmojiTableViewController.swift" %}
+{% tabs %}
+{% tab title="EmojiTableViewController.swift" %}
 ```swift
 ...
     // Override to support editing the table view.
@@ -162,7 +171,8 @@ struct Emoji {
     }
 ...
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### Step 4. Edit and Add an Emoji
 
@@ -170,7 +180,8 @@ struct Emoji {
 
 ![Main.storyboard \(making sagues with static table view\)](../../.gitbook/assets/grafik%20%282%29.png)
 
-{% code title="EmojiTableViewController.swift" %}
+{% tabs %}
+{% tab title="EmojiTableViewController.swift" %}
 ```swift
 ...
     // MARK: - Navigation
@@ -215,9 +226,11 @@ struct Emoji {
     }
 
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
-{% code title="AddEditEmojiTableViewController.swift" %}
+{% tabs %}
+{% tab title="AddEditEmojiTableViewController.swift" %}
 ```swift
 ...
     @IBOutlet weak var symbolTextField: UITextField!
@@ -281,7 +294,8 @@ struct Emoji {
         emoji = Emoji(symbol: symbol, name: name, description: description, usage: usage)
     }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 > Full sources[  
 > https://github.com/eajang/iOS-Example-EmojiDictionary](https://github.com/eajang/iOS-Example-EmojiDictionary)

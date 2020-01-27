@@ -2,7 +2,7 @@
 
 ### Observable
 
-lazy Push collections of multiple values
+**lazy** Push collections of multiple values
 
 ### Pull vs Push
 

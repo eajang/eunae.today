@@ -90,11 +90,58 @@ ref: [https://rxjs.dev/api/operators/takeUntil](https://rxjs.dev/api/operators/t
 
 ## Netflix Search
 
+```javascript
+var searchResultsSets = 
+    keyPresses.
+        throttle(250).
+        map(key => getJSON("\searchResults?q=" + input.value).
+            retry(3).
+            takeUntil(keyPresses)).
+        concatAll();
 
+searchResultSets.forEach(
+    resultSet => updateSearchResults(resultSet),
+    error => showMessage("the server appears to be down."));
+```
 
+* [throttle\(\)](https://rxjs.dev/api/operators/throttle)
+* [getJSON\(\)](https://rxjs-dev.firebaseapp.com/api/ajax/ajax) return an Observable
+* [retry\(\)](https://rxjs.dev/api/operators/retry)
 
+## Optimizing the Search
 
+```javascript
+var searchResultsSets = 
+    keyPresses.
+        throttle(250).
+        map(key => getJSON("\searchResults?q=" + input.value).
+            retry(3)).
+        switchLatest();    // diff. only here
 
+searchResultSets.forEach(
+    resultSet => updateSearchResults(resultSet),
+    error => showMessage("the server appears to be down."));
+```
+
+## Three-Dimensional Collections
+
+```javascript
+var authorizations = 
+    player.
+        init().
+        map(() => 
+            playAttempts.
+                map(movieId=>
+                    player.authorize(movieId).
+                        catch(e => Observable.empty).
+                        tackUntil(cancels)).
+                concatAll())).
+        concatAll();
+        
+authorizations.foreach(
+    licnese => player.play(license),
+    error => showDialog("Sorry, can't play right now."));
+```
 
 
 

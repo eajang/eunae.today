@@ -10,7 +10,8 @@ description: 25. Sep. 2019
 
 ## Filter the List View - Approach 1. by @State property
 
-{% code title="LandmarkList.swift" %}
+{% tabs %}
+{% tab title="LandmarkList.swift" %}
 ```swift
 import SwiftUI
 
@@ -48,7 +49,8 @@ struct LandmarkList_Previews: PreviewProvider {
     }
 }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 1. `@State` property: add a state to a view
 2.  Add a toggle to interact with user
@@ -63,7 +65,8 @@ struct LandmarkList_Previews: PreviewProvider {
 
 > To prepare for the user to control which particular landmarks are favorites, you will first store the landmark data in a **observable** object.
 
-{% code title="UserData.swift" %}
+{% tabs %}
+{% tab title="UserData.swift" %}
 ```swift
 import SwiftUI
 import Combine
@@ -73,7 +76,8 @@ final class UserData: ObservableObject {
     @Published var landmarks = landmarkData
 }
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
 ### ObservableObject protocol from Combine framework
 
@@ -146,7 +150,8 @@ struct LandmarkDetail: View {
 
 ## Create a Favorite Button and make it works!
 
-{% code title="LandmarkDetail.swift" %}
+{% tabs %}
+{% tab title="LandmarkDetail.swift" %}
 ```swift
 ...
 HStack {
@@ -167,5 +172,6 @@ HStack {
     }
 ...        
 ```
-{% endcode %}
+{% endtab %}
+{% endtabs %}
 
