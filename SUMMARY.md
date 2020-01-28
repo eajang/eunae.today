@@ -10,6 +10,7 @@
 
 * [Overview](internship-trivago/overview.md)
 * [Daily log](internship-trivago/daily-log/README.md)
+  * [Day 06. Set up and Learn up 5](internship-trivago/daily-log/day-06.-set-up-and-learn-up-5.md)
   * [Day 05. Set up and learn up 4](internship-trivago/daily-log/day-05.-set-up-and-learn-up-4.md)
   * [Day 04. Set up and learn up 3](internship-trivago/daily-log/day-04.-set-up-and-learn-up-3.md)
   * [Day 03. Set up and learn up 2](internship-trivago/daily-log/day-03.-set-up-and-learn-up-2.md)
@@ -20,6 +21,7 @@
 * [Git / Github](til/git-github.md)
 * [RxJS](til/rxjs/README.md)
   * [\[Frontend Master\] Asynchronous Programming in JavaScript \(with Rx.js Observables\)](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/README.md)
+    * [Exercise 25-27](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/exercise-25-27.md)
     * [Exercises 1-24](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/exercises.md)
     * [Observables](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/observables.md)
     * [Building Blocks](til/rxjs/frontend-master-asynchronous-programming-in-javascript-with-rx.js-observables/building-blocks.md)
