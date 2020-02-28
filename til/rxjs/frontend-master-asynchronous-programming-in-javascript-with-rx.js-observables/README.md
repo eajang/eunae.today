@@ -8,5 +8,7 @@ description: 'https://frontendmasters.com/courses/asynchronous-javascript/'
 
 {% page-ref page="observables.md" %}
 
+{% page-ref page="exercises.md" %}
 
+{% page-ref page="exercise-25-27.md" %}
 

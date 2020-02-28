@@ -10,6 +10,8 @@
 
 * [Overview](internship-trivago/overview.md)
 * [Daily log](internship-trivago/daily-log/README.md)
+  * [Day 08. Twig twig twig](internship-trivago/daily-log/day-08.-twig-twig-twig.md)
+  * [Day 07. Set up environments](internship-trivago/daily-log/day-07.-set-up-environments.md)
   * [Day 06. Set up and Learn up 5](internship-trivago/daily-log/day-06.-set-up-and-learn-up-5.md)
   * [Day 05. Set up and learn up 4](internship-trivago/daily-log/day-05.-set-up-and-learn-up-4.md)
   * [Day 04. Set up and learn up 3](internship-trivago/daily-log/day-04.-set-up-and-learn-up-3.md)
